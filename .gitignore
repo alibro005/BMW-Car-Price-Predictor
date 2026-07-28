@@ -1,0 +1,16 @@
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+backend/model/pipeline.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDEs and local settings
+.vscode/
+.idea/
+.env
