@@ -6,12 +6,18 @@ from typing import Literal
 from fastapi.middleware.cors import CORSMiddleware
 
 from pathlib import Path
+from huggingface_hub import hf_hub_download
+import joblib
 
-# pipeline = joblib.load("../model/pipeline.pkl")
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+model_path = hf_hub_download(
+    repo_id="alibro005/BMW-Car-Price-Predictor",
+    filename="pipeline.pkl"
+)
 
-pipeline = joblib.load(BASE_DIR / "model" / "pipeline.pkl")
+pipeline = joblib.load(model_path)
+
+
 
 app = FastAPI(
     title="Car Price Prediction API",
