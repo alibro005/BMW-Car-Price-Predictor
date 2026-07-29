@@ -7,10 +7,10 @@ function App() {
   const [prediction, setPrediction] = useState(null);
 
   return (
-    <div className="min-h-screen from-slate-100 via-blue-50 to-slate-200 ">
+    <div className="min-h-screen from-slate-100 via-blue-50 to-slate-200 m-7.5">
       <Navbar />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ml-5.5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ">
         <CarForm onPrediction={setPrediction} />
         <PredictionCard prediction={prediction} />
       </div>
