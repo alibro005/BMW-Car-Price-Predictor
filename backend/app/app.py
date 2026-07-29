@@ -23,7 +23,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://bmw-car-price-predictor.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -66,7 +69,7 @@ def predict(car: CarInput):
         prediction = pipeline.predict(input_df)
 
         price = max(0.0, float(prediction[0]))
-        
+
         return PredictionResponse(price=price)
 
     except Exception as e:
