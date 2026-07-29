@@ -9,14 +9,11 @@ from pathlib import Path
 from huggingface_hub import hf_hub_download
 import joblib
 
-
 model_path = hf_hub_download(
-    repo_id="alibro005/BMW-Car-Price-Predictor",
-    filename="pipeline.pkl"
+    repo_id="alibro005/BMW-Car-Price-Predictor", filename="pipeline.pkl"
 )
 
 pipeline = joblib.load(model_path)
-
 
 
 app = FastAPI(
