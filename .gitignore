@@ -4,7 +4,7 @@
 env/
 venv/
 
-backend/model/pipeline.pkl
+model/pipeline.pkl
 
 # Python cache
 __pycache__/
