@@ -28,7 +28,7 @@ def train_model(X, y):
 
     models = {
         "Linear Regression": LinearRegression(),
-        "Random Forest": RandomForestRegressor(n_estimators=200, random_state=42),
+        "Random Forest": RandomForestRegressor(n_estimators=50,max_depth=15,random_state=42,),
     }
 
     best_pipeline = None
@@ -52,7 +52,7 @@ def train_model(X, y):
             best_score = results["R2"]
             best_pipeline = pipeline
 
-    MODEL_PATH = Path("backend/model/pipeline.pkl")
+    MODEL_PATH = Path("model/pipeline.pkl")
     MODEL_PATH.parent.mkdir(
         parents=True,
         exist_ok=True

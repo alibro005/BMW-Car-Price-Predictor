@@ -1,0 +1,18 @@
+[project]
+name = "bmw-car-price-predictor-api"
+version = "0.1.0"
+requires-python = ">=3.13"
+
+dependencies = [
+    "fastapi[standard]==0.140.1",
+    "pandas==3.0.5",
+    "numpy==2.5.1",
+    "scikit-learn==1.9.0",
+    "joblib==1.5.3",
+    "pydantic==2.13.4",
+    "huggingface_hub==1.25.1"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

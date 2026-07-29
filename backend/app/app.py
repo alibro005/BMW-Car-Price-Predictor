@@ -1,4 +1,3 @@
-import joblib
 import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
@@ -66,9 +65,9 @@ def predict(car: CarInput):
 
         prediction = pipeline.predict(input_df)
 
-        prediction = max(0, prediction)
-
-        return PredictionResponse(price=float(prediction[0]))
+        price = max(0.0, float(prediction[0]))
+        
+        return PredictionResponse(price=price)
 
     except Exception as e:
         print(f"Error occurred during prediction: {e}")
