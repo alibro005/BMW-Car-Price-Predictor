@@ -26,7 +26,14 @@ This project estimates the selling price of a used BMW using features such as th
 The application is built with a production-oriented workflow, including data preprocessing, model training, API development, and frontend deployment. The trained model is hosted on Hugging Face Hub and is downloaded automatically when the API starts.
 
 ---
+## Screenshot
 
+<p align="center">
+  <img src="images/app.png" alt="BMW Car Price Predictor" width="800">
+</p>
+
+
+---
 ## Features
 
 - Predict used BMW prices in real time
@@ -140,9 +147,13 @@ BMW-Car-Price-Predictor/
 ├── src/
 │   ├── model/
 │   └── pipeline/
+│   └── data/
 │
 ├── notebook/
 ├── data/
+│   ├── raw/
+│   └── preprocessed/
+|
 ├── main.py
 └── README.md
 ```
@@ -270,6 +281,7 @@ python main.py
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
 ---
 
 ## Author
